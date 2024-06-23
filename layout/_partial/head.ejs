@@ -90,6 +90,15 @@ function custom_inject() {
 %>
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXNY8X8ZC0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LXNY8X8ZC0');
+  </script>
   <meta charset="utf-8">
   <meta name="hexo-theme" content="<%- stellar_info('tree') %>" theme-name="<%- stellar_info('name') %>" theme-version="<%- stellar_info('version') %>">
   <%- generate_robots() %>
@@ -104,14 +113,14 @@ function custom_inject() {
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
-  
+
   <title><%- generate_title() %></title>
 
   <% if (theme.open_graph && theme.open_graph.enable) { %>
     <%- open_graph(og_args()) %>
   <% } %>
   <%- generate_description() %>
-  
+
   <%- generate_keywords() %>
 
   <!-- feed -->
